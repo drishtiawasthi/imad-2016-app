@@ -2,7 +2,10 @@
 var button = document.getElementById('counter');
 button.onclick = function () {
     
-    
+    //Submit name
+var name = nameInput.value;
+var submit =document.getElementById('submit_btn');
+submit.onclick = function () {
 
     //Create a request object
     var request = new XMLHttpRequest();
@@ -27,16 +30,10 @@ button.onclick = function () {
         }
         //Not done yet
     };
+    
     //Make the request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET', 'http://http://drishtiawasthi.imad.hasura.io/submit-name?name' + name, true);
     request.send(null);
 };
-
-//Submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
-var submit =document.getElementById('submit_btn');
-submit.onclick = function () {
- 
-};
-    
